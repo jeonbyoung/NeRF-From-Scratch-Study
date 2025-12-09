@@ -1,5 +1,7 @@
 # NeRF From Scratch Study
 
+![PE + Raw Result](images/PE%20+%20Raw_real.gif)
+
 이 레포지토리는 **NeRF (Neural Radiance Fields)** 논문을 읽고 PyTorch를 사용하여 **직접 구현** 한 프로젝트입니다.
 Volume Rendering의 핵심 원리를 이해하고, original NeRF를 구현했으며, GPU가 없이도 비교적 빠르게 학습 후, 결과물을 볼 수 있는 **"Tiny NeRF"** 에 대한 구현과 다양한 **비교 실험(Ablation Study)** 을 담고 있습니다.
 
@@ -43,8 +45,8 @@ Tiny NeRF 아키텍처에서 최적의 성능을 끌어내기 위해 다양한 �
 
 | PE Only (기존 방식) | PE + Raw Input (x, y, z 추가) |
 | :---: | :---: |
-| ![PE Only Result](images/PE%20Only.png) | ![PE + Raw Result](images/PE&20+%20Raw.png) |
-| ![PE Only Result](images/PE%20Only_real.gif) | ![PE + Raw Result](images/PE&20+%20Raw_real.gif) |
+| ![PE Only Result](images/PE%20Only.png) | ![PE + Raw Result](images/PE%20+%20Raw.png) |
+| ![PE Only Result](images/PE%20Only_real.gif) | ![PE + Raw Result](images/PE%20+%20Raw_real.gif) |
 | *초기 수렴이 느리고 불안정함* | *빠른 수렴 및 정확한 형상 파악* |
 
 ### 3-2. 네트워크 깊이 비교: 2 Layers vs. 4 Layers
