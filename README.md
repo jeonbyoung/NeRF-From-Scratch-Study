@@ -43,8 +43,8 @@ Tiny NeRF 아키텍처에서 최적의 성능을 끌어내기 위해 다양한 �
 
 | PE Only (기존 방식) | PE + Raw Input (x, y, z 추가) |
 | :---: | :---: |
-| ![PE Only Result](images/PE%20Only.png) | ![PE + Raw Result](images/PE&20+%20Raw) |
-| ![PE Only Result](images/PE%20Only_real.png) | ![PE + Raw Result](images/PE&20+%20Raw_real) |
+| ![PE Only Result](images/PE%20Only.png) | ![PE + Raw Result](images/PE&20+%20Raw.png) |
+| ![PE Only Result](images/PE%20Only_real.gif) | ![PE + Raw Result](images/PE&20+%20Raw_real.gif) |
 | *초기 수렴이 느리고 불안정함* | *빠른 수렴 및 정확한 형상 파악* |
 
 ### 3-2. 네트워크 깊이 비교: 2 Layers vs. 4 Layers
@@ -53,7 +53,7 @@ MLP의 깊이(Capacity)가 3D 복원 품질에 미치는 영향.
 
 | 2 Layers (얕은 모델) | 4 Layers (깊은 모델) |
 | :---: | :---: |
-| ![2 Layers](images/2layer) | ![4 Layers](images/4layer) |
+| ![2 Layers](images/2layer.png) | ![4 Layers](images/4layer.png) |
 
 ### 3-3. 샘플링 전략: Ray당 샘플 수 ($N_c$)
 하나의 광선(Ray) 위에서 몇 개의 점을 샘플링할 것인가?
@@ -63,7 +63,7 @@ MLP의 깊이(Capacity)가 3D 복원 품질에 미치는 영향.
 
 | 샘플 수 적음 (Low Samples) | 샘플 수 많음 (High Samples) |
 | :---: | :---: |
-| ![N_c64](images/Nc64) | ![N_c128](images/Nc128) |
+| ![N_c64](images/Nc64.png) | ![N_c128](images/Nc128.png) |
 
 ### 3-4. 하이퍼파라미터 튜닝: 학습률 (Learning Rate)
 * **LR = 5e-3:**
@@ -72,7 +72,7 @@ MLP의 깊이(Capacity)가 3D 복원 품질에 미치는 영향.
 
 | LR = 5e-3 | LR = 1e-4 |
 | :---: | :---: |
-| ![High LR](images/LR53) | ![Optimized LR](images/LR14) |
+| ![High LR](images/LR53.png) | ![Optimized LR](images/LR14.png) |
 
 ---
 
@@ -82,7 +82,7 @@ MLP의 깊이(Capacity)가 3D 복원 품질에 미치는 영향.
 * **학습 데이터 크기:** 학습 데이터의 크기도 영향을 줍니다. 큰 이미지의 가운데에 있는 작은 이미지가 Tiny_NeRF의 학습 데이터 이미지 크기이고, 각각 실제 크기만큼 scaling해놓은 것입니다. 이처럼, 작은 이미지로는 personal한 환경에서도 학습 가능했지만, 큰 이미지는 GPU를 사용하지 않고는 긴 시간이 소요됩니다.
 
 <div align="center">
-  <img src="images/versus" width="60%">
+  <img src="images/versus.png" width="60%">
   <p><em>Original NeRF 아키텍처 학습 시도 결과 (PE Only)</em></p>
 </div>
 
